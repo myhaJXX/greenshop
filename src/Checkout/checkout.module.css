@@ -1,0 +1,14 @@
+.cont{
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+}
+
+.addressBox{
+    width: 60%;
+    display: grid;
+    row-gap: 30px;
+    justify-content: space-between;
+    align-content: flex-start;
+    grid-template: repeat(5, 65px) / repeat(2, 48%);
+}

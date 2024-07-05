@@ -1,0 +1,229 @@
+footer>p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 40px;
+    text-align: center;
+    color: #727272;
+}
+.top{
+    padding: 30px;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.topCard{
+    height: 110px;
+    width: 250px;
+    border-radius: 10px;
+    display: grid;
+    align-content: space-between;
+}
+
+.topCard>h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    color: #727272;
+}
+
+.email-cont{
+    height: 100%;
+    width: 30%;
+    display: grid;
+    h5{
+        font-size: 1em;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+        text-align: justify;
+        color: #727272;
+    }
+}
+
+.email-box{
+    height: 50px;
+    width: 100%;
+    border: 2px solid #727272;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.email-box>input,.email-box>div{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.email-box>input{
+    padding-left: 20px;
+    height: 100%;
+    width: 80%;
+    color: #727272;
+}
+
+.email-box>div{
+    height: 100%;
+    width: 20%;
+    border-left: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--green);
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.email-box>div:hover{
+    border-color: #727272;
+    background-color: #fff;
+    color: var(--green);
+}
+
+.footer-middle{
+    padding: 0px 30px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #cef4d5;
+    border-bottom: 2px solid #cef4d5;
+    background-color: #e6ffeb;
+}
+
+.img-cont{
+    display: flex;
+    gap: 10px;
+    img{
+        width: 30px;
+    }
+    h2{
+        font-size: 1.5em;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 2px;
+        color: var(--green);
+    }
+}
+
+.middleCard{
+    max-width: 250px;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    p{
+        font-size: 1em;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+        text-align: justify;
+    }
+}
+
+.footer-bottom{
+    padding: 0px 30px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-bottom: 2px solid #cef4d5;
+}
+
+.bottomCard{
+    display: grid;
+    gap: 10px;
+    align-content: center;
+}
+
+.bottomCard>a{
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 20px;
+    color: #727272;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.bottomCard>a:hover{
+    border-color: #727272;
+}
+
+.bottomCardLast{
+    display: grid;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.bottomCardLast>div{
+    display: grid;
+    gap: 15px;
+}
+
+.bottomCardLast nav{
+    display: flex;
+    gap: 20px;
+}
+
+.icon{
+    padding: 10px;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #727272;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.icon:hover{
+    transform: scale(1.2);
+    color: #727272;
+    border-color: transparent;
+}
+
+@media(max-width: 1080px){
+    .footer-middle{
+        display: none;
+    }
+
+    .top{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    
+    .bottomCard>a{
+        font-size: 0.875em;
+    }
+
+    footer h4{
+        font-size: 1em;
+    }
+    
+    .bottomCard nav{
+        gap: 10px;
+    }
+
+    .icon{
+        padding: 5px;
+        height: 15px;
+        width: 15px;
+    }
+}

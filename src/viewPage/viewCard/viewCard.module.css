@@ -1,0 +1,226 @@
+.card{
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 100px 400px 1fr;
+    gap: 40px;
+}
+
+.card>article>h2{
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.photos{
+    align-self: center;
+    height: 80%;
+    border-radius: 20px;
+    display: grid;
+    align-content: space-between;
+    background-color: var(--white);
+}
+
+.photos>img{
+    width: 100%;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.photos>img:hover{
+    transform: scale(1.1);
+}
+
+.bigImg{
+    align-self: center;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.bigImg>img{
+    height: 95%;
+    width: 95%;
+    transition: all .4s linear;
+}
+
+.card>article{
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.PC{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    font-size: 1.25em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    color: var(--green);
+}
+
+.comments{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.shortInfo{
+    display: grid;
+    gap: 5px;
+    align-content: flex-start;
+}
+
+.shortInfo>p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.size-box{
+    display: grid;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+.size-box>div{
+    display: flex;
+    gap: 10px;
+}
+
+.size-box-button{
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.size-box-button:hover{
+    background-color: #b3fec2;
+}
+
+.activeS{
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.count-cont{
+    display: flex;
+    gap: 20px;
+}
+
+.count-box{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.count-box>p{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}
+
+.count-box>button{
+    height: 40px;
+    width: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 2em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 0px;
+    color: #fff;
+    background-color: var(--green);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.count-box>button:hover{
+    border-color: var(--green);
+    color: var(--green);
+    background-color: transparent;
+}
+
+.count-cont>button{
+    height: 50px;
+    width: 150px;
+    border: 3px solid var(--green);
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.count-cont>button:nth-child(2){
+    background-color: var(--green);
+    color: #fff;
+}
+
+.count-cont>button:nth-child(2):hover{
+    color: var(--green);
+    background-color: transparent;
+}
+
+.count-cont>button:nth-child(3){
+    background-color: transparent;
+    color: var(--green);
+}
+
+.count-cont>button:nth-child(3):hover{
+    color: #fff;
+    background-color: var(--green);
+}
+
+.lowInfo{
+    display: grid;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+.lowInfo>p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+}
+
+.links-cont{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon{
+    padding: 10px;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #727272;
+    border-radius: 50%;
+    color: #727272;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.icon:hover{
+    transform: scale(1.1);
+    border-color: transparent;
+    color: var(--green);
+}

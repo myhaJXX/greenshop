@@ -1,0 +1,117 @@
+.cont{
+    width: 35%;
+    display: grid;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+.cont>h5{
+    justify-self: flex-end;
+    width: fit-content;
+    border-bottom: 2px solid #727272;
+    font-size: 1.125em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.cont>button{
+    height: 40px;
+    width: 70%;
+    justify-self: flex-end;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    background-color: var(--green);
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.cont>button:hover{
+    color: var(--green);
+    background-color: transparent;
+}
+
+.cont>h5:hover{
+    border-color: transparent;
+    transform: scale(1.05);
+    color: var(--green);
+}
+
+.cardsBox{
+    padding-right: 10px;
+    max-height: 600px;
+    display: grid;
+    gap: 15px;
+    align-content: flex-start;
+    overflow-y: scroll;
+}
+
+.cardsBox::-webkit-scrollbar{
+    width: 10px;
+}
+
+.cardsBox::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+.cardsBox::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+.littleBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.littleBox>h4{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.priceBox{
+    justify-self: flex-end;
+    width: 80%;
+    display: grid;
+    gap: 15px;
+    align-content: flex-start;
+}
+
+.priceBox>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.priceBox h5{
+    font-size: 1.125em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.priceBox h4{
+    font-weight: 500;
+}
+
+.priceBox>div:last-child{
+    padding-top: 15px;
+    border-top: 2px solid #f4f4f4;
+}
+
+.priceBox p{
+    font-size: 1.125em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: var(--green);
+}

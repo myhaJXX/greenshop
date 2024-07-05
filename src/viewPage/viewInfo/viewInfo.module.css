@@ -1,0 +1,96 @@
+.cont{
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.links-cont{
+    display: flex;
+    gap: 20px;
+}
+
+.link{
+    border-bottom: 3px solid transparent;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.link:hover{
+    transform: scale(1.05);
+}
+
+.active{
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.desc-cont{
+    display: grid;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.desc-cont p{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+}
+
+.comments-cont{
+    display: grid;
+    grid-template: repeat(auto-fill, 150px) / repeat(3, 30%);
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+.comment{
+    padding: 10px;
+    height: 150px;
+    display: grid;
+    column-gap: 10px;
+    grid-template: 50px 1fr 20px / 50px repeat(2, 1fr);
+    background-color: var(--white)
+}
+
+.icon{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.comment>h4{
+    display: flex;
+    align-items: center;
+}
+
+.stars{
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.comment-desc{
+    grid-area: 2 / 1 / 3 / 4;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.date{
+    grid-area: 3 / 1 / 4 / 4;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    text-align: right;
+    color: #c2c2c2;
+}

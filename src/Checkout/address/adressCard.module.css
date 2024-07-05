@@ -1,0 +1,17 @@
+.cont{
+    display: grid;
+    gap: 5px;
+    align-content: flex-end;
+    grid-template: 20px 1fr / 100%;
+}
+
+.cont>h5{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cont>input{
+    padding-left: 10px;
+    border: 2px solid #e4e4e4;
+}

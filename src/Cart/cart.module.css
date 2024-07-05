@@ -1,0 +1,211 @@
+.cont{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.cards-box{
+    max-height: 500px;
+    width: 60%;
+    display: grid;
+    grid-template: 50px repeat(auto-fill, 75px) / 40% 10% 20% repeat(2,10%);
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.cards-box>h1{
+    font-size: 5em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: #efefef;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.cardsTotal{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: grid;
+    grid-template: 100% / 40% 10% 20% repeat(2,10%);
+    justify-content: space-between;
+}
+
+.cards-box::-webkit-scrollbar{
+    width: 10px;
+}
+
+.cards-box::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+.cards-box::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+.card>div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.card img{
+    height: 75px;
+}
+
+.card h5{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+}
+
+.card>h5:last-child{
+    font-weight: 700;
+    color: var(--green);
+}
+.card button{
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    background-color: var(--green);
+    font-size: 2em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    line-height: 0px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+.card button:hover{
+    color: var(--green);
+    background-color: transparent;
+}
+
+.card button+h5{
+    text-align: center;
+    width: 10px;
+}
+
+.cartInfo{
+    width: 35%;
+    display: grid;
+    align-content: flex-start;
+    gap: 20px;
+}
+
+.cartInfo h2{
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cartInfo>div{
+    display: grid;
+    align-content: flex-start;
+}
+
+.cartInfo h4{
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.cartInfo p{
+    width: 120px;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cartInfo-little{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-cont{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border: 3px solid var(--green);
+    border-radius: 5px;
+}
+
+.input-cont>input{
+    padding-left: 10px;
+    height: 100%;
+    width: 80%;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    background-color: transparent;
+}
+
+.input-cont>button{
+    height: 100%;
+    width: 20%;
+    border-left: 3px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    background-color: var(--green);
+    transition: all .4s linear;
+}
+
+.input-cont>button:hover{
+    border-color: var(--green);
+    color: var(--green);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.lowerButtons{
+    display: grid;
+    gap: 10px;
+}
+
+.lowerButtons>button{
+    height: 50px;
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.lowerButtons>button:nth-child(1){
+    color: #fff;
+    background-color: var(--green);
+}
+
+.lowerButtons>button:nth-child(1):hover{
+    border-color: var(--green);
+    background-color: transparent;
+    color: var(--green);
+}
+
+.lowerButtons>button:nth-child(2):hover{
+    color: var(--green);
+}

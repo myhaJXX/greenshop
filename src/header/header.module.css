@@ -1,0 +1,57 @@
+.img-cont{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    h2{
+        font-size: 1.5em;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 2px;
+        color: var(--green);
+    }
+}
+
+.links-cont{
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.links-cont>*{
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #727272;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+.links-cont>button:hover{
+    transform: scale(1.05);
+    color: #000;
+}
+
+.activeButton{
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.shoppingCart{
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.shoppingCart:hover{
+    background-color: #b1edbd;
+    color: #fff;
+}

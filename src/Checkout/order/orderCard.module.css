@@ -1,0 +1,67 @@
+.cont{
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 70px 2fr repeat(2,1fr);
+    grid-template-areas: 
+    "img info count price"
+    "img id count price"
+    ;
+    align-items: center;
+}
+
+.cont>h5{
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cont>img{
+    height: 100%;
+    width: 100%;
+    grid-area: img;
+}
+
+.cont>h4{
+    font-size: 1em;
+}
+
+.title{
+    grid-area: info;
+}
+
+.id{
+    grid-area: id;
+}
+
+.count{
+    grid-area: count;
+    text-align: center;
+    color: #b1b1b1;
+}
+
+.price{
+    grid-area: price;
+    text-align: center;
+    color: var(--green);
+    text-align: right;
+}
+
+/* .cont>h4:first-child{
+    grid-area: info;
+    font-weight: 500;
+}
+
+.cont>h4:last-child{
+    grid-area: price;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.cont>h5:first-child{
+    grid-area: id;
+}
+
+.cont>h5:last-child{
+    grid-area: count;
+} */
