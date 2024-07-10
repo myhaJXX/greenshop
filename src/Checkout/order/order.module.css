@@ -115,3 +115,13 @@
     font-family: "Montserrat", sans-serif;
     color: var(--green);
 }
+
+@media (max-width: 800px){
+    .priceBox{
+        width: 100%;
+    }
+
+    .cont>button{
+        justify-self: center;
+    }
+}

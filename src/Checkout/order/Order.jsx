@@ -47,7 +47,7 @@ function Order({cart, discount, setCart}) {
 
           <div>
             <h4>Total:</h4>
-            <p>$ {(total- total*0.1 - total*discount/100) < 0 ? 0 : total- total*0.01 - total*discount/100}</p>
+            <p>$ {(total- total*0.1 - total*discount/100) < 0 ? 0 : (total- total*0.01 - total*discount/100).toFixed(0)}</p>
           </div>
 
       </div>

@@ -1,5 +1,4 @@
 .cont{
-    max-height: 280px;
     width: 100%;
     display: grid;
     gap: 30px;
@@ -74,5 +73,12 @@
 
     .info-box>p{
         font-size: 0.875em;
+    }
+}
+
+@media (max-width: 500px){
+    .cont{
+        display: flex;
+        flex-direction: column;
     }
 }

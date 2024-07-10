@@ -44,14 +44,20 @@
 
 .comments-cont{
     display: grid;
-    grid-template: repeat(auto-fill, 150px) / repeat(3, 30%);
+    grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 300px);
     justify-content: space-between;
     row-gap: 40px;
 }
 
+@media (max-width: 600px){
+    .comments-cont{
+        grid-template: repeat(auto-fill, 200px) / 100%;
+    }
+}
+
 .comment{
     padding: 10px;
-    height: 150px;
+    height: 200px;
     display: grid;
     column-gap: 10px;
     grid-template: 50px 1fr 20px / 50px repeat(2, 1fr);

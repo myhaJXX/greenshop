@@ -8,7 +8,7 @@ const inputs = [
   {title: 'Country / Region', placeholder: 'Select a country / region', imp: 1, name:'country'},
   {title: 'Town / City', placeholder: '', imp: 1, name:'city'},
   {title: 'Street Address', placeholder: 'House number and street name', imp: 1, name:'street'},
-  {title: '', placeholder: 'Appartment, suite, unit, etc. (optional)', imp: 0, name:'apps'},
+  {title: 'House Number', placeholder: 'Appartment, suite, unit, etc. (optional)', imp: 0, name:'apps'},
   {title: 'State', placeholder: 'State', imp: 1, name:'state'},
   {title: 'Zip', placeholder: '', imp: 0, name:'zip'},
   {title: 'Email address', placeholder: '', imp: 1, name:'email'},

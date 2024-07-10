@@ -63,3 +63,9 @@ footer{
     display: grid;
     align-content: flex-start;
 }
+
+@media (max-width: 400px){
+    header{
+        gap: 5px;
+    }
+}

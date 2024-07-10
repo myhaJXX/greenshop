@@ -130,8 +130,7 @@ footer>p{
 }
 
 .footer-bottom{
-    padding: 0px 30px;
-    height: 250px;
+    padding: 10px 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -225,5 +224,13 @@ footer>p{
         padding: 5px;
         height: 15px;
         width: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    .footer-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }

@@ -118,6 +118,8 @@
 
 .count-cont{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -204,7 +206,9 @@
 
 .links-cont{
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 5px;
     align-items: center;
 }
 
@@ -223,4 +227,39 @@
     transform: scale(1.1);
     border-color: transparent;
     color: var(--green);
+}
+
+@media (max-width: 1080px){
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photos{
+        align-self: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .photos>img{
+        height: 100px;
+        width: auto;
+    }
+}
+
+@media (max-width: 450px){
+    .photos{
+        align-self: center;
+        width: 75%;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+
+    .photos>img{
+        height: 100px;
+    }
+
+    .links-cont>h4{
+        width: 100%;
+    }
 }

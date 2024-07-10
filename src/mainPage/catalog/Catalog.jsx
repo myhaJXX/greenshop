@@ -17,14 +17,34 @@ function Catalog({cart, setCart}) {
         sort: 'default'
     })
 
-    useEffect(()=>{
-        console.log(filters)
-    }, [filters])
+    // useEffect(()=>{
+    //     console.log(filters)
+    // }, [filters])
+
+    const [size, setSize] = useState(window.innerWidth)
+    window.addEventListener('resize', ()=>{
+      setSize(window.innerWidth)
+    })
+
+    const [active, setActive] = useState(false)
     
   return (
     <section id='catalog' className={cl.cont}>
         <TopLinks filters={filters} setFilters={setFilters}/>
+        {size < 900 ? 
+        <div className={cl.littleParams} style={active ? {height: 'fit-content'} : {height: '20px'}}>
+          <h5 onClick={()=>setActive(!active)}>
+            {active ?
+            'Close filters <'
+            :
+            'Check filters >'
+          }
+          </h5>
+          <FormCato filters={filters} setFilters={setFilters}/>
+        </div> 
+        :
         <FormCato filters={filters} setFilters={setFilters}/>
+        }
         <Window cart={cart} setCart={setCart} filters={filters}/>
         <img src={banner} alt="" />
     </section>

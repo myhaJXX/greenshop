@@ -12,3 +12,22 @@
     align-content: flex-start;
     grid-template: repeat(5, 65px) / repeat(2, 48%);
 }
+
+@media (max-width: 800px){
+    .cont{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cont>div{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    .addressBox{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}

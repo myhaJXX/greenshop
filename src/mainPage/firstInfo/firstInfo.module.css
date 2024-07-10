@@ -74,3 +74,25 @@
         font-weight: 500;
     }
 }
+
+@media (max-width: 800px){
+    .cont{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    .cont h3{
+        display: none;
+    }
+
+    .cont a{
+        display: none;
+    }
+}
+
+@media (max-width: 400px){
+    .cont h1{
+        font-size: 1.25em;
+    }
+}

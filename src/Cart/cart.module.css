@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .cards-box>h1{
@@ -71,6 +72,8 @@
 }
 
 .card>h5:last-child{
+    grid-column-start: 4;
+    grid-column-end: 6;
     font-weight: 700;
     color: var(--green);
 }
@@ -208,4 +211,86 @@
 
 .lowerButtons>button:nth-child(2):hover{
     color: var(--green);
+}
+
+@media (max-width: 1080px){
+    .cont{
+        flex-direction: column;
+    }
+
+    .cards-box{
+        width: 100%;
+    }
+
+    .cards-box>h4{
+        text-align: center;
+    }
+
+    .cards-box>h4:nth-child(1){
+        text-align: left;
+    }
+
+    .cartInfo{
+        width: 100%;
+    }
+
+    .card{
+        justify-items: center;
+    }
+
+    .card>div:nth-child(1){
+        justify-self: flex-start;
+    }
+}
+
+@media(max-width: 700px){
+    .cards-box{
+        grid-template: 50px repeat(auto-fill, 75px) / 1fr 60px 18% repeat(2,35px);
+    }
+
+    .cards-box>h4{
+        font-size: 1em;
+    }
+
+    .card{
+        grid-template: 100% / 1fr 60px 18% repeat(2, 35px);
+    }
+
+    .card>div{
+        gap: 5px;
+    }
+
+    .card button{
+        height: 30px;
+        width: 30px;
+    }
+
+    .card button+h5{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 500px){
+    .cards-box{
+        grid-template: repeat(auto-fill, 120px) / 1fr 60px 18% repeat(2,35px);
+        row-gap: 20px;
+    }
+
+    .card{
+        grid-template: 62.5% 37.5% / repeat(3, 1fr);
+    }
+
+    .card>div:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .card>h5:last-child{
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
+    .cards-box>h4{
+        display: none;
+    }
 }

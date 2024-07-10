@@ -2,7 +2,7 @@
     height: 70px;
     width: 100%;
     display: grid;
-    grid-template: repeat(2, 1fr) / 70px 2fr repeat(2,1fr);
+    grid-template: repeat(2, 1fr) / 70px 2fr 50px 1fr;
     grid-template-areas: 
     "img info count price"
     "img id count price"
@@ -47,21 +47,8 @@
     text-align: right;
 }
 
-/* .cont>h4:first-child{
-    grid-area: info;
-    font-weight: 500;
+@media(max-width: 500px){
+    .cont>h4:last-child{
+        font-size: 0.75em;
+    }
 }
-
-.cont>h4:last-child{
-    grid-area: price;
-    font-weight: 700;
-    color: var(--green);
-}
-
-.cont>h5:first-child{
-    grid-area: id;
-}
-
-.cont>h5:last-child{
-    grid-area: count;
-} */

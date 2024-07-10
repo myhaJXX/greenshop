@@ -60,7 +60,7 @@ function ViewCard({cart, setCart, info, comments}) {
     <section className={cl.card}>
 
       <div className={cl.photos}>
-        {photoss.map((e,i)=><img onClick={()=>setActiveP(i)} src={e}/>)}
+        {photoss.map((e,i)=><img onClick={()=>setActiveP(i)} src={e} key={i}/>)}
       </div>
 
       <div className={cl.bigImg}>
