@@ -59,7 +59,7 @@ function CartInfo({cart, discount, setDiscount}) {
 
         <div style={{display: 'flex', justifyContent:'space-between', alignItems: 'center'}}>
             <h4>Total:</h4>
-            <p>$ {(total- total*0.1 - total*discount/100) < 0 ? 0 : total- total*0.01 - total*discount/100}</p>
+            <p>$ {(total- total*0.1 - total*discount/100) < 0 ? 0 : (total- total*0.01 - total*discount/100).toFixed(2)}</p>
         </div>
 
         <div className={cl.lowerButtons}>
