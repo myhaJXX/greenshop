@@ -1,7 +1,7 @@
 import React, { useEffect,useMemo, useState } from "react";
 import MainPage from "./mainPage/MainPage";
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Route, Routes} from 'react-router-dom'
 
 import './app.css'
 import View from "./viewPage/View";
@@ -46,7 +46,7 @@ function App() {
   },[cart])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Header/>
         <Routes>
@@ -58,7 +58,7 @@ function App() {
         </Routes>
         <Footer/>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
