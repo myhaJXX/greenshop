@@ -46,7 +46,7 @@ function App() {
   },[cart])
 
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <div className="App">
         <Header/>
         <Routes>
