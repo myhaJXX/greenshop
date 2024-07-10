@@ -22,6 +22,7 @@
     color: #efefef;
     grid-column-start: 1;
     grid-column-end: 6;
+    grid-row-end: 3;
 }
 
 .cardsTotal{
@@ -292,5 +293,9 @@
 
     .cards-box>h4{
         display: none;
+    }
+
+    .cards-box>h1{
+        font-size: 4em;
     }
 }

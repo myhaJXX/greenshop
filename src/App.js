@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect,useMemo, useState } from "react";
 import MainPage from "./mainPage/MainPage";
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -13,11 +13,35 @@ import Checkout from "./Checkout/Checkout";
 function App() {
 
   const [cart, setCart] = useState([])
+  const [showCart, setShowCart] = useState([])
 
   const [discount, setDiscount] = useState(0)
 
-  useEffect(()=>{
-    console.log(cart)
+  useMemo(()=>{
+
+    let cartCopy = []
+
+    for(let i =0;i<cart.length;i++){
+
+      let count = 0;
+      let object = {...cart[i]}
+
+      for(let j = i;j<cart.length;j++){
+        if(cart[i].ID == cart[j].ID) count+=cart[j].count
+      }
+      object.count = count
+
+      let flag = true;
+      for(let k = 0;k<cartCopy.length;k++){
+        if(object.ID == cartCopy[k].ID) flag = false
+      }
+
+      if(flag) cartCopy = [...cartCopy, object]
+
+    }
+
+    // console.log(cartCopy)
+    setShowCart([...cartCopy])
   },[cart])
 
   return (
@@ -25,10 +49,10 @@ function App() {
       <div className="App">
         <Header/>
         <Routes>
-          <Route path="/" element={<MainPage cart={cart} setCart={setCart}/>}/>
-          <Route path="/view/:id" element={<View cart={cart} setCart={setCart}/>}/>
-          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} discount={discount} setDiscount={setDiscount} />}/>
-          <Route path="/checkout" element={<Checkout cart={cart} discount={discount} setCart={setCart}/>}/>
+          <Route path="/" element={<MainPage cart={showCart} setCart={setCart}/>}/>
+          <Route path="/view/:id" element={<View cart={showCart} setCart={setCart}/>}/>
+          <Route path="/cart" element={<Cart cart={showCart} setCart={setCart} discount={discount} setDiscount={setDiscount} />}/>
+          <Route path="/checkout" element={<Checkout cart={showCart} discount={discount} setCart={setCart}/>}/>
         </Routes>
         <Footer/>
       </div>
