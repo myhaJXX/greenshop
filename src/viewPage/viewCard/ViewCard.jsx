@@ -1,20 +1,21 @@
 import React, { useEffect, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import cl from './viewCard.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faStar } from '@fortawesome/free-regular-svg-icons'
 import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-const faceBook = <FontAwesomeIcon icon={faFacebookF} className={cl.icon} />
-const twitter = <FontAwesomeIcon icon={faTwitter} className={cl.icon} />
-const ll = <FontAwesomeIcon icon={faLinkedinIn} className={cl.icon} />
-const email = <FontAwesomeIcon icon={faEnvelope} className={cl.icon} />
+const faceBook = <FontAwesomeIcon icon={faFacebookF} className={cl.icon}/>
+const twitter = <FontAwesomeIcon icon={faTwitter} className={cl.icon}/>
+const ll = <FontAwesomeIcon icon={faLinkedinIn} className={cl.icon}/>
+const email = <FontAwesomeIcon icon={faEnvelope} className={cl.icon}/>
 
 const star = <FontAwesomeIcon icon={faStar} />
 
 let average = 0;
 
 function ViewCard({cart, setCart, info, comments}) {
-
+  const nav = useNavigate()
   useMemo(()=>{
     let max = 0;
     comments.forEach(e=>{
@@ -102,7 +103,7 @@ function ViewCard({cart, setCart, info, comments}) {
               <button onClick={()=>setParams({...params, count:params.count+1})}>+</button>
           </div>
 
-          <button>Buy Now</button>
+          <button onClick={()=>nav('/error')}>Buy Now</button>
           <button onClick={()=>setCart([...cart, info])}>Add To Cart</button>
         </div>
 

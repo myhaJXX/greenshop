@@ -9,6 +9,7 @@ import Footer from "./footer/Footer";
 import Header from "./header/header";
 import Cart from "./Cart/Cart";
 import Checkout from "./Checkout/Checkout";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/view/:id" element={<View cart={showCart} setCart={setCart}/>}/>
           <Route path="/cart" element={<Cart cart={showCart} setCart={setCart} discount={discount} setDiscount={setDiscount} />}/>
           <Route path="/checkout" element={<Checkout cart={showCart} discount={discount} setCart={setCart}/>}/>
+          <Route path="/*" element={<ErrorPage/>}/>
         </Routes>
         <Footer/>
       </div>

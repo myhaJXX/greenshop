@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import cl from './footer.module.css'
 import FooterBottomCard from './FooterBottomCard'
 
@@ -12,6 +13,7 @@ const links = [
 ]
 
 function FooterBottom() {
+    const nav = useNavigate()
   return (
     <div className={cl['footer-bottom']}>
         {links.map((e,i)=><FooterBottomCard title={e.title} links={e.links} key={i} />)}
@@ -20,11 +22,11 @@ function FooterBottom() {
             <div>
                 <h4>Social Media</h4>
                 <nav>
-                    <FontAwesomeIcon icon={faFacebookF} color='#46A358' className={cl.icon}/>
-                    <FontAwesomeIcon icon={faInstagram} color='#46A358' className={cl.icon}/>
-                    <FontAwesomeIcon icon={faTwitter} color='#46A358' className={cl.icon}/>
-                    <FontAwesomeIcon icon={faLinkedinIn} color='#46A358' className={cl.icon}/>
-                    <FontAwesomeIcon icon={faYoutube} color='#46A358' className={cl.icon}/>
+                    <FontAwesomeIcon icon={faFacebookF} color='#46A358' className={cl.icon} onClick={()=>nav('/error')}/>
+                    <FontAwesomeIcon icon={faInstagram} color='#46A358' className={cl.icon} onClick={()=>nav('/error')}/>
+                    <FontAwesomeIcon icon={faTwitter} color='#46A358' className={cl.icon} onClick={()=>nav('/error')}/>
+                    <FontAwesomeIcon icon={faLinkedinIn} color='#46A358' className={cl.icon} onClick={()=>nav('/error')}/>
+                    <FontAwesomeIcon icon={faYoutube} color='#46A358' className={cl.icon} onClick={()=>nav('/error')}/>
                 </nav>
             </div>
 

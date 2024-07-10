@@ -1,0 +1,20 @@
+.cont{
+    display: grid;
+    align-content: flex-start;
+}
+
+.cont>h1, .cont>h2{
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.cont>h1{
+    font-size: 5em;
+    color: var(--green);
+}
+
+.cont>h2{
+    font-size: 3.5em;
+    color: #e4e4e4;
+}
